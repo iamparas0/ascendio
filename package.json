@@ -4,7 +4,7 @@
     "description": "A lightweight CSS framework",
     "main": "index.html",
     "scripts": {
-        "build": "type src\\base.css src\\utilities.css src\\components.css src\\config.css src\\themes.css > dist\\ascendio.css && npx postcss dist/ascendio.css -o dist/ascendio.min.css && type dist\\ascendio.min.css src\\ascendio.js > dist\\ascendio.bundle.js",
+        "build": "npx concat-cli -o dist/ascendio.css src/base.css src/utilities.css src/components.css src/config.css src/themes.css && npx postcss dist/ascendio.css -o dist/ascendio.min.css && npx concat-cli -o dist/ascendio.bundle.js dist/ascendio.min.css src/ascendio.js",
         "watch": "npx postcss src/*.css --watch --output dist/ascendio.min.css"
     },
     "author": "Paras Vishwakarma",
