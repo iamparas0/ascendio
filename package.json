@@ -1,0 +1,16 @@
+{
+    "name": "ascendio",
+    "version": "1.0.0",
+    "description": "A lightweight CSS framework",
+    "main": "index.html",
+    "scripts": {
+        "build": "type src\\base.css src\\utilities.css src\\components.css src\\config.css src\\themes.css > dist\\ascendio.css && npx postcss dist/ascendio.css -o dist/ascendio.min.css && type dist\\ascendio.min.css src\\ascendio.js > dist\\ascendio.bundle.js",
+        "watch": "npx postcss src/*.css --watch --output dist/ascendio.min.css"
+    },
+    "author": "Paras Vishwakarma",
+    "license": "MIT",
+    "devDependencies": {
+        "cssnano": "^7.0.6",
+        "postcss-cli": "^11.0.1"
+    }
+}
